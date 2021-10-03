@@ -14,11 +14,11 @@ export class RepositorioService {
   constructor(private cookieService: CookieService) {
     const users = this.getCookieData(this.storageTag);
     if (users) {
-      console.log('ACHOU BANCO DE DADOS')
-      console.log(users)
+      // console.log('ACHOU BANCO DE DADOS')
+      // console.log(users)
       this.users = users;
     } else {
-      console.log('NAO ACHOU BANCO DE DADOS. VAI CRIAR FAKE')
+      // console.log('NAO ACHOU BANCO DE DADOS. VAI CRIAR FAKE')
       this.users = {};
       this.users["TroniPM"] = {
         "login": "TroniPM",
@@ -63,6 +63,10 @@ export class RepositorioService {
   }
 
   getUserByLogin(username: string): any {
+    if (username == null || username.length == 0) {
+      return null;
+    }
+
     const keys = Object.keys(this.users);
     for (let index = 0; index < keys.length; index++) {
       const element = keys[index];
@@ -73,10 +77,6 @@ export class RepositorioService {
     }
 
     return null;
-  }
-
-  userExistsLocalDatabase(username: string): boolean {
-    return this.getUserByLogin(username) != null;
   }
 
   getCurrentUser() {

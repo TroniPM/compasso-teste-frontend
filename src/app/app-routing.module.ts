@@ -6,18 +6,23 @@ import { StarredComponent } from './components/starred/starred.component';
 import { RepositorioService } from './services/repositorio.service';
 import { RepositoriesComponent } from './components/repositories/repositories.component';
 import { InfosComponent } from './components/infos/infos.component';
+import { AboutComponent } from './components/about/about.component';
 
 export const routerConfig: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   },
   {
     path: 'profile',
     component: ProfileComponent,
     children: [
       {
-        path: '',
+        path: 'infos',
         component: InfosComponent,
         outlet: 'sidedata'
       },
@@ -30,18 +35,23 @@ export const routerConfig: Routes = [
         path: 'starred',
         component: StarredComponent,
         outlet: 'sidedata'
-      }
+      },
+      {
+        path: '',
+        component: InfosComponent,
+        outlet: 'sidedata'
+      },
     ]
 
   },
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: '/',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
 ];

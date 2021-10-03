@@ -13,6 +13,7 @@ import { RepositoriesComponent } from './components/repositories/repositories.co
 import { StarredComponent } from './components/starred/starred.component';
 import { InfosComponent } from './components/infos/infos.component';
 import { RepositoryComponent } from './components/repository/repository.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RepositoryComponent } from './components/repository/repository.componen
     RepositoriesComponent,
     StarredComponent,
     InfosComponent,
-    RepositoryComponent
+    RepositoryComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

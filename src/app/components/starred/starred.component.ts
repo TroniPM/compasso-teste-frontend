@@ -26,8 +26,15 @@ export class StarredComponent implements OnInit {
     }
 
     this.userService.getUserStarred(this.user.login).subscribe((data: any) => {
-      console.log('StarredComponent', data)
       this.user = this.repositorioService.addUserStarred(this.user.login, data);
+    }, (error) => {
+      console.error(error);
+
+      if (error.error.message) {
+        alert(error.error.message);
+      } else {
+        alert("Um erro aconteceu. Tente novamente mais tarde.");
+      }
     });
   }
 

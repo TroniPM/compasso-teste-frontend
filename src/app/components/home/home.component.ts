@@ -28,6 +28,14 @@ export class HomeComponent implements OnInit {
         this.repositorioService.setCurrentuser(data);
 
         this.router.navigate(["/profile"]);
+      }, (error) => {
+        console.error(error);
+
+        if (error.error.message) {
+          alert(error.error.message);
+        } else {
+          alert("Um erro aconteceu. Tente novamente mais tarde.");
+        }
       })
     }
   }

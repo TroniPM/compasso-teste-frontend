@@ -27,6 +27,14 @@ export class RepositoriesComponent implements OnInit {
 
     this.userService.getUserRepos(this.user.login).subscribe((data: any) => {
       this.user = this.repositorioService.addUserRepos(this.user.login, data);
+    }, (error) => {
+      console.error(error);
+
+      if (error.error.message) {
+        alert(error.error.message);
+      } else {
+        alert("Um erro aconteceu. Tente novamente mais tarde.");
+      }
     });
   }
 
