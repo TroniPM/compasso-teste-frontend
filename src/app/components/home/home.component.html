@@ -1,0 +1,19 @@
+<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <h1>Github API</h1>
+    <p>Quer saber mais informações sobre um usuário? Insira o nome de usuário abaixo e verifique.</p>
+
+    <div class="">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Nome de Usuário" aria-label="Nome de Usuário"
+                aria-describedby="button-addon2" [(ngModel)]="username">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                    (click)="getUserInfoBtn()">Avançar</button>
+            </div>
+        </div>
+
+    </div>
+</div>

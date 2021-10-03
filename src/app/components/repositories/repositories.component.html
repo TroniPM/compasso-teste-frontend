@@ -1,0 +1,10 @@
+<h2>Repositórios</h2>
+
+<div class="container pt-3">
+    <div class="row justify-content-center ">
+        <div class="card bg-light col-md-12 col-sm-12 col-lg-12 col-xl-5" style="margin:0 15px 15px 0;"
+            *ngFor="let item of user.repos">
+            <app-repository [repo]="item" [currentUser]="user"></app-repository>
+        </div>
+    </div>
+</div>

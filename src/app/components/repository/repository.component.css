@@ -1,0 +1,17 @@
+ .content-exp {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     height: 300px;
+ }
+ 
+ .upper {
+     justify-content: normal;
+ }
+ 
+ .text-card-esp {
+     display: -webkit-box;
+     -webkit-line-clamp: 4;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+ }

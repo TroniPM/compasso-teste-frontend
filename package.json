@@ -19,6 +19,10 @@
     "@angular/platform-browser": "~10.2.4",
     "@angular/platform-browser-dynamic": "~10.2.4",
     "@angular/router": "~10.2.4",
+    "@popperjs/core": "^2.10.2",
+    "bootstrap": "^5.1.1",
+    "jquery": "^3.6.0",
+    "ngx-cookie-service": "^12.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
