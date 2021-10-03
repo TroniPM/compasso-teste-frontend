@@ -1,6 +1,6 @@
 # CompassoNew
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.1. Para executar o projeto utilize `ng serve --open`.
 
 ## Development server
 
